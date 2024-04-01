@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Terms and Conditions</title>
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.translucent-background {
+    background-color: rgba(255, 255, 255, 0.8); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agreeCheckbox {
+    margin-top: 10px;
+   
+}
+
+
+body {
+    margin: 0;
+    font-family: TStar,sans-serif;;
+}
+
+.translucent-background {
+    background: linear-gradient(to left, rgba(55, 150, 131, 0.8) 0%, rgba(128, 150, 55, 0.8) 100%); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agreeCheckbox {
+    margin-top: 10px;
+}
+
+#submitBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background:rgba(55, 150, 131, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+   background: rgba(128, 150, 55, 0.8);
+}
+
+
+/* Customize the label (the checkbox-btn) */
+.checkbox-btn {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-btn label {
+  cursor: pointer;
+  font-size: 14px;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 2.5px solid #1bc712;
+  transition: .2s linear;
+}
+.checkbox-btn input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  top: 40%;
+  width: 8px;
+  height: 12px;
+  border: 2px solid #0ea021;
+  filter: drop-shadow(0px 0px 10px #0ea021);
+  border-width: 0 2.5px 2.5px 0;
+  transition: .2s linear;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.2);
+}
+
+/* Show the checkmark when checked */
+.checkbox-btn input:checked ~ .checkmark:after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  animation: pulse 1s ease-in;
+}
+
+.checkbox-btn input:checked ~ .checkmark {
+  transform: rotate(45deg);
+  border: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.6);
+  }
+}
+
+
+
+</style>
+<body>
+
+    <div class="translucent-background">
+        <div class="content">
+            <h2>Terms and Conditions</h2>
+            <p>Welcome to the survey form!</p>
+            
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing or using this website, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, please do not use our website.</p>
+
+            <h3>2. User Conduct</h3>
+            <p>You agree to abide by all applicable local, state, national, and international laws and regulations in your use of the website. You also agree not to:</p>
+            <ul>
+                <li>Violate any applicable laws or regulations;</li>
+                <li>Impersonate any person or entity;</li>
+                <li>Harass, threaten, or otherwise interfere with others;</li>
+                <li>Interfere with the operation of the website;</li>
+                <li>Upload or distribute any content that may infringe upon the rights of others or violate any laws.</li>
+            </ul>
+
+            <h3>3. Privacy Policy</h3>
+            <p>Your use of our website is also governed by our Privacy Policy. Please review our Privacy Policy to understand our practices.</p>
+
+            <!-- <label for="agreeCheckbox">
+                <input type="checkbox" id="agreeCheckbox"> I have read and agree to the Terms and Conditions.
+            </label> -->
+
+            <label class="checkbox-btn">
+                <label for="checkbox"></label>
+                <input id="checkbox" class="agreeCheckbox" type="checkbox"> I have read and agree to the Terms and Conditions.
+                <span class="checkmark"></span>
+            </label>
+            <button id="submitBtn" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            if (document.querySelector('.agreeCheckbox').checked) {
+                const file = '../surveyform.html';
+        // Open the file in a new tab or window
+        window.open(file, '_blank');
+            } else {
+                alert('Please agree to the Terms and Conditions before submitting.');
+            }
+        }
+    </script>
+
+</body>
+</html>

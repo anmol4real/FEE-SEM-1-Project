@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./surveyform 2.css" />
+    <link rel="icon" href="./images/surveyicon.jpeg" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-REVCf0ezo05i+eWzNUjXnCIy9MmGcgEB0ck05QaVys5RSR7SxEkDx/+GmM5Y5E83BsX9Ucf4f6Duq+1zKnb/V9g==" crossorigin="anonymous" />
+    <i class="fas fa-circle-xmark"></i> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+
+
+    <!-- icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    
+
+    <title>Survey Project</title>
+  </head>
+
+  <body>
+    <nav>
+     
+      <header>
+        <section>
+          <nav  class="navbar">
+              <a href="#" class="logo">
+                  <img class="Oxform-logo" src="./images/name.png" alt="Foundation Logo"></a>
+              <a href="./index.html">| Home |</a>
+              <a href="./about us.html"> | About Us | </a>
+              <a href="./surveyform.html"> | Survey Form | </a>
+
+
+              
+
+
+              <div class="Adropdown">
+                  <a  class="contact-us" href=# style="color:black; " >| Contact Us |</a>
+                  <div class="Adropdown-content">
+                      <a id="insta" href="https://instagram.com/money_kaun?igshid=MzRlODBiNWFlZA==">ANSH KAUSHAL</a>
+                      <a id="insta" href="https://instagram.com/anmol_4_real?igshid=MzRlODBiNWFlZA==">ANMOLPREET</a>
+                      <a id="insta" href="https://instagram.com/anmoltuteja287?igshid=MzRlODBiNWFlZA==">ANMOL</a>
+                  </div>
+              </div>
+             
+            
+              <a target="_blank"   href="./login page/login.html"> <button id="openModalButton" ><img class="account-icon" src="./images/account-icon.png" alt="Account Icon">
+              </button></a>
+
+
+      </nav>
+  </section>
+
+  <section>
+    <div id="print-btn">
+    <button id="print"></button>
+  </div>
+  </section>
+
+
+  
+    <div class="container">
+      <h2 class="Registeration">Survey Form</h2>
+      <button onclick="scrollToTop()" id="scrollButton">⬆</button>
+      <form id="contactForm" action="./myaction.php" name="myForm" onsubmit="return validateform()" method="post">
+        <h2 class="naming">FILL YOUR DETAILS:</h2>
+        <hr />
+        <br />
+       
+
+        <label for="Name" class="input-name">Name</label>
+<input
+  class="box bigbox name-input"
+  type="text"
+  id="Name"
+  name="Name"
+  placeholder="Enter Your First Name"
+/> <span class="formerror"></span>
+<!-- <div class="len-validation">
+<h2>Length is too short</h2>
+<button class="len-close" type="button"  onclick="closevalidation(e)">close</button>
+</div> -->
+
+
+<label for="Surname" class="input-surname">Surname (if applicable)</label>
+<input
+  class="box bigbox surname-input"
+  type="text"
+  id="Surname"
+  name="Surname"
+  placeholder="Enter Your Surname"
+/> <span class="formerror"></span>
+
+<label for="email" class="input-name">Email id</label>
+<input
+  class="box bigbox name-input"
+  type="text"
+  id="email"
+  name="email"
+  placeholder="Enter Your email id"
+/> <span class="formerror"></span>
+
+        <label for="Age">Age</label>
+        <input
+          class="box bigbox"
+          type="number"
+          id="Age"
+          name="Age"
+          placeholder="Enter Your Age"
+        />  <span class="formerror"></span>
+
+
+
+        <label  for="phoneNumber">Phone number</label>
+        <input
+          class="box bigbox"
+          type="number"
+          id="Phone"
+          placeholder="Enter Your Phone Number"
+          name="phoneNumber" pattern="[0-9]{10}" required
+        /> <span class="formerror"></span>
+
+
+        <label for="Mode">How do you earn your living?</label>
+        <input
+          class="box bigbox"
+          type="text"
+          id="Mode"
+          name="Mode"
+          placeholder="Your Mode of Income"
+        /> <span class="formerror"></span>
+
+        <label for="HowMuch">What is your annual income?</label>
+        <input
+          class="box bigbox"
+          type="number"
+          id="HowMuch"
+          name="HowMuch"
+          placeholder="Your Annual Income"
+        />
+
+        <label for="Tax">Do you pay income tax regularly?</label>
+        <input type="radio" name="tax" value="YES" /> YES
+        <input type="radio" name="tax" value="NO" /> NO
+
+        <p id="question1">Which College did you graduate from?</p>
+        <label>
+          <input
+            class="bigbox box"
+            type="radio"
+            name="options"
+            value="Govt. College"
+          />
+          Govt. College
+          <div class="dropdown">
+            <select>
+              <option>IIT</option>
+              <option selected="selected">MNIT</option>
+              <option>NIT</option>
+              <option>GFTI</option>
+              <option>III</option>
+              <option>DU</option>
+            </select>
+          </div>
+        </label>
+        <br />
+        <label>
+          <input
+            type="radio"
+            class="bigbox box"
+            name="options"
+            value="Private College"
+          />
+          Private College
+          <div class="dropdown">
+            <select>
+              <option>Thapar Institute of Engg & Tech</option>
+              <option>Amity</option>
+              <option>CGC LANDRAN</option>
+              <option selected="selected">Chitkara</option>
+              <option>JAYPEE</option>
+              <option>BITS PILANI</option>
+            </select>
+          </div>
+        </label>
+        <br />
+
+        <label for="averageIncome">Average Income in Your locality</label>
+        <input
+          class="box bigbox"
+          type="number"
+          id="averageIncome"
+          name="averageIncome"
+          placeholder="Enter Average Income in Your locality"
+        />
+
+        <label for="livingConditions">Living Conditions in Your locality</label>
+        <textarea
+          class="box"
+          maxlength="100"
+          name="question3"
+          rows="4"
+          placeholder="Describe the living conditions in your area"
+        ></textarea>
+
+        <label for="areaPerception">What do you think of your locality?</label>
+        <textarea
+          class="box"
+          maxlength="100"
+          name="question3"
+          rows="4"
+          placeholder="Share your thoughts about your locality"
+        ></textarea>
+
+        <p>
+          ADD SOME DETAILS ABOUT YOU THAT WILL HELP US TO KNOW WHAT KIND OF
+          PERSON YOU ARE...
+        </p>
+        <textarea
+          class="box"
+          maxlength="100"
+          name="question3"
+          rows="4"
+          placeholder="Tell something about yourself"
+        ></textarea>
+
+        <label for="communityInvolvement"
+          >Are you involved in any community activities or organizations? If
+          yes, please provide details.</label
+        >
+        <textarea
+          class="box"
+          maxlength="100"
+          id="communityInvolvement"
+          name="question3"
+          rows="4"
+          placeholder="Describe your community involvement, if any"
+        ></textarea>
+
+        <label for="accessToResources"
+          >Do you have easy access to healthcare, education, and other essential
+          resources in your area?</label
+        >
+        <input type="radio" name="accessToResources" value="Yes" /> Yes
+        <input type="radio" name="accessToResources" value="No" /> No
+
+        <label for="challengesFaced"
+          >What are the main challenges or issues you face in your community or
+          area?</label
+        >
+        <textarea
+          class="box"
+          maxlength="100"
+          id="challengesFaced"
+          name="question3"
+          rows="4"
+          placeholder="Describe the challenges you face in your community"
+        ></textarea>
+
+        <label for="suggestions"
+          >What suggestions do you have to improve the living conditions and
+          well-being of your community?</label
+        >
+        <textarea
+          class="box"
+          maxlength="100"
+          id="suggestions"
+          name="question3"
+          rows="4"
+          placeholder="Provide your suggestions for improvement"
+        ></textarea>
+
+        <label for="capitalistFriendly"
+          >Do you think the area is friendly towards capitalist practices and
+          businesses?</label
+        >
+        <textarea
+          class="box"
+          maxlength="100"
+          name="question3"
+          rows="4"
+          placeholder="Share your thoughts about capitalist-friendly practices in your area"
+        ></textarea>
+
+        <label for="numFactories"
+          >Approximately, how many factories or large businesses are there in
+          your area?</label
+        >
+
+        <input
+          class="box bigbox"
+          type="number"
+          id="numFactories"
+          name="numFactories"
+          placeholder="Enter the number of factories or large businesses"
+        />
+
+        <label for="laborConditions"
+          >What are the prevailing labor conditions like in the factories or
+          businesses in your area?</label
+        >
+        <textarea
+          class="box"
+          maxlength="100"
+          name="question3"
+          rows="4"
+          placeholder="Describe the labor conditions in factories or businesses"
+        ></textarea>
+
+          <label>Are you interested in additional information?</label>
+          <input type="radio" name="interest" value="yes" onclick="showAdditionalQuestion()"> Yes
+          <input type="radio" name="interest" value="no" onclick="showAdditionalQuestion()"> No
+        
+          <div id="additionalQuestion" style="display:none;">
+            <label>What additional information are you looking for?</label>
+            <input type="text" name="additionalInfo">
+          </div>
+        
+<!-- 
+        <div id="href">
+          <a target="”_blank”" href="https://www.chitkara.edu.in/"
+            >Click here to visit our official site</a
+          >
+        </div> -->
+        <br />
+        <p align="center">
+          <button   class="button" id="submitButton" type="submit">Submit</button>
+          <div class="popup" id="popup">
+            <img src="./images/Untitled design.png">
+            <h2>Thank you!</h2>
+            <p>Your details have been successfully submitted. Thanks!</p>
+            <button type="button" onclick="closePopup()">Ok</button>
+        </div>
+          
+        </p>
+        <p>Time remaining: <span id="countdown">10:00</span></p>
+
+      </form>
+    </div>
+    
+    <div id="toastbox"></div>
+
+    <div class="modal" id="shareModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <p>Share this link:</p>
+        <input type="text" id="shareLink" readonly>
+        <button id="copyLink">Copy Link</button>
+      </div>
+    </div>
+
+
+    
+    <script src="https://kit.fontawesome.com/9bf23ddcb3.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./surveyform.js"></script>
+  </body>
+</html>
+
+
