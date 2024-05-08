@@ -258,7 +258,7 @@ input[type="radio"] {
 }
 
 button {
-    background-color:  #266a5d;
+    background-color:  #00a816;
     color: #fff;
     padding: 15px 30px;
     border: none;
@@ -271,9 +271,8 @@ button {
 button:hover {
     /* background-color:  #266a5d; */
     /* background-color: #266d66; */
-    background-color: #53a8b1;
-    background-color: #809637 ;
-    box-shadow: 0 0 20px rgba(255, 247, 247, 0.2);
+    background-color: #005a1e ;
+    box-shadow: 0 0 20px rgba(71, 71, 71, 0.2);
 }
 
 #scrollButton {
@@ -281,7 +280,7 @@ button:hover {
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: #266a5d;
+    background-color: #0a551d;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -294,7 +293,7 @@ button:hover {
 
 #scrollButton:hover {
     background-color: #266a5d;
-    background-color:  #809637 ;
+    background-color:  rgb(0, 184, 0) ;
 }
 
 .dropdown {

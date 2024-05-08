@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Under Development</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+    .container {
+        text-align: center;
+    }
+    h1 {
+        font-size: 36px;
+        color: green;
+        text-shadow: #b1ffa6 3px 3px 4px;
+        margin-bottom: 20px;
+        z-index: 100;
+    }
+    p {
+        font-size: 18px;
+        color: #6caa66;
+    }
+
+    .sign{
+        color: rgb(164, 214, 157);
+        font-size: 150px;
+        z-index: 20;
+        margin-bottom: -25px;
+    }
+    .spinner {
+    z-index: 30;
+    margin-right: -270px;
+    margin-top: -55px;
+    width: 40px;
+    height: 40px;
+    --clr: rgba(255, 255, 255, 0.774);
+    --clr-alpha: rgba(0, 224, 11, 0.452);
+    animation: spinner 1.6s infinite ease;
+    transform-style: preserve-3d;
+    }
+  
+    .spinner > div {
+    background-color: var(--clr-alpha);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 3px solid var(--clr);
+    }
+
+    .spinner div:nth-of-type(1) {
+    transform: translateZ(-35.2px) rotateY(180deg);
+    }
+
+    .spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+    }
+
+    .spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+    }
+
+    .spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+    }
+
+    .spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+    }
+
+    .spinner div:nth-of-type(6) {
+    transform: translateZ(35.2px);
+    }
+
+    @keyframes spinner {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+    }
+</style>
+</head>
+<body>
+    <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    <div class="container">
+        <div class="sign"><br></div><br><br><br>
+        <h1>Page Under Development</h1>
+        <p>We are currently working on this page.<br><br> Please check back later.</p>
+    </div>
+</body>
+</html>
