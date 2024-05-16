@@ -18,4 +18,5 @@ Welcome to the NGO Website Project repository! This project is a website develop
 ## Contributing
 If you would like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Any feedback, suggestions, or improvements are appreciated!
 
+This file has been updated.
 -------------------------------------------------------------------------------------------------------------------
